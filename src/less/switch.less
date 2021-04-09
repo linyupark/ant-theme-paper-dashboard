@@ -1,0 +1,38 @@
+button.ant-switch {
+  box-sizing: content-box;
+  height: 26px;
+  background-color: #fff;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+  .ant-switch-handle {
+    height: 22px;
+    width: 22px;
+    &::before {
+      border-radius: 50%;
+      background-color: rgba(0, 0, 0, 0.4);
+      box-shadow: none;
+    }
+  }
+  .ant-switch-inner {
+    color: rgba(0, 0, 0, 0.25);
+    font-weight: 700;
+    padding: 0 6px;
+  }
+  &.ant-switch-checked {
+    border-color: @primary-color;
+    .ant-switch-handle {
+      left: calc(100% - 22px - 3px);
+      &::before {
+        background-color: @primary-color;
+      }
+    }
+    .ant-switch-inner {
+      color: @primary-color;
+    }
+  }
+  // 取消外部效果
+  .ant-click-animating-node {
+    border: 0 none;
+    opacity: 0;
+    animation: none 0 ease 0 1 normal;
+  }
+}

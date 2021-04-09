@@ -1,0 +1,90 @@
+@import "./_var.less";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+// @import './sidebar.less';
+@import "./input.less";
+@import "./select.less";
+@import "./picker.less";
+@import "./table.less";
+@import "./btn.less";
+@import "./radio.less";
+@import "./checkbox.less";
+@import "./switch.less";
+
+.ant-spin-dot-item {
+  background-color: #ccc !important;
+}
+.ant-spin,
+.ant-spin.ant-spin-spinning {
+  color: #ccc;
+}
+
+.ant-popover-inner-content {
+  padding: 0 !important;
+  .ant-menu {
+    border-right: none !important;
+    border-radius: 10px !important;
+    padding: 10px 0;
+    overflow: hidden;
+    .ant-menu-item-only-child {
+      height: 30px;
+      line-height: 30px;
+      margin: 0 !important;
+      &:hover {
+        background-color: @text-color;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.form-submit,
+.message-btns {
+  .ant-btn.ant-btn-primary {
+    border-color: @success-color;
+    background-color: @success-color;
+    color: #fff;
+    &:hover {
+      background-color: darken(@success-color, 10%) !important;
+      border-color: darken(@success-color, 10%) !important;
+    }
+  }
+}
+
+.ant-layout-sider-zero-width-trigger {
+  top: 10px !important;
+}
+.ant-layout.ant-layout-has-sider.mobile {
+  .ant-layout-sider {
+    position: absolute;
+    z-index: 10;
+    min-height: 100vh;
+  }
+  .ant-layout-header {
+    zoom: 0.7;
+    margin-left: 50px;
+    .header-menus {
+      border-bottom: none;
+    }
+  }
+  .ant-layout-content {
+    zoom: 0.7;
+    .site-layout-background.module {
+      height: calc(130vh);
+    }
+  }
+}
+
+// 大标题
+.card-title {
+  font-size: 1.714em;
+  line-height: 1.45em;
+  margin-top: 10px;
+  margin-bottom: 0.75rem;
+  small {
+    text-transform: capitalize;
+    font-weight: 400;
+    color: #9a9a9a;
+    font-size: 0.75em;
+    margin-left: 25px;
+  }
+}

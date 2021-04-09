@@ -1,0 +1,69 @@
+.ant-select:not(.ant-select-disabled) .ant-select-selector {
+  box-shadow: none !important;
+  border-color: #ddd !important;
+}
+.ant-select:not(.ant-select-disabled):hover .ant-select-selector {
+  border-color: #9a9a9a !important;
+}
+.ant-select:not(.ant-select-disabled):focus .ant-select-selector {
+  border-color: #9a9a9a !important;
+}
+
+.ant-dropdown-trigger {
+  display: inline-block;
+  height: 28px;
+  line-height: 28px;
+  background: @table-header-color;
+  color: #fff;
+  padding: 0 10px;
+  border-radius: 19px;
+}
+
+.ant-dropdown-menu-item-selected,
+.ant-dropdown-menu-submenu-title-selected,
+.ant-dropdown-menu-item-selected > a,
+.ant-dropdown-menu-submenu-title-selected > a {
+  background: none !important;
+  color: @text-color !important;
+  &::after {
+    position: absolute;
+    content: '✓';
+    right: 10px;
+  }
+}
+
+.anticon.anticon-check {
+  color: @text-color;
+}
+
+// 表单里的 select 变色块
+.form-select {
+  .ant-select {
+    background-color: @btn-primary-bg;
+    border-radius: 20px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: middle;
+    .ant-select-selector {
+      border-color: @btn-primary-bg !important;
+      background-color: @btn-primary-bg !important;
+      .ant-select-selection-placeholder {
+        color: #fff;
+      }
+    }
+    .ant-select-arrow {
+      color: #fff;
+    }
+    &:not(.ant-select-disabled):hover .ant-select-selector {
+      border-right-width: 0 !important;
+      border-color: @btn-primary-bg !important;
+    }
+    .ant-select-selection-item {
+      color: #fff !important;
+    }
+    .ant-select-clear {
+      background-color: @btn-primary-bg;
+      color: #fff;
+    }
+  }
+}
