@@ -2,8 +2,10 @@
   "name": "@x011/theme-paper-dashboard",
   "version": "0.0.1",
   "description": "Theme Paper Dashboard for Ant Design Web",
+  "main": "./dist/theme.js",
+  "source": "theme.js",
   "scripts": {
-    "build": "npx lessc theme.less theme.css"
+    "build": "npx microbundle && npx lessc theme.less theme.css"
   },
   "author": "linyupark@gmail.com",
   "license": "MIT",
@@ -17,6 +19,7 @@
   "devDependencies": {
     "antd": "^4.15.1",
     "less": "^4.1.1",
+    "microbundle": "^0.13.0",
     "mitt": "^2.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
