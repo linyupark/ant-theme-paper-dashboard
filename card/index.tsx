@@ -13,7 +13,7 @@ interface PDCardProps {
 
 const PDCard = (props: PDCardProps) => {
   return (
-    <div className="PaperCard">
+    <div className="PDCard">
       <div className="body">
         <i className="icon">{props.icon}</i>
         <div className="info">

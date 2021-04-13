@@ -29,7 +29,7 @@ const PDModal = (props: PDModalProps) => {
   const modalProps = objectFilter(props, excludeProps);
 
   return (
-    <Modal className="PaperModal" footer={null} {...modalProps}>
+    <Modal className="PDModal" footer={null} {...modalProps}>
       {excludeProps.map((col) => {
         return (
           props[col] && (
