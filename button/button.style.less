@@ -1,0 +1,106 @@
+.PDButton {
+  height: auto;
+  background-color: #66615b;
+  border-width: 2px;
+  font-weight: 600;
+  font-size: 0.8571em;
+  line-height: 1.35em;
+  text-transform: uppercase;
+  border: none;
+  margin: 10px 1px;
+  border-radius: 3px;
+  padding: 11px 22px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 150ms linear;
+  box-shadow: none !important;
+  &.primary {
+    background-color: #51cbce;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #34b5b8 !important;
+    }
+  }
+  &.info {
+    background-color: #51bcda;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #2ba9cd !important;
+    }
+  }
+  &.success {
+    background-color: #6bd098;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #44c47d !important;
+    }
+  }
+  &.warning {
+    background-color: #fbc658;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #fab526 !important;
+    }
+  }
+  &.danger {
+    background-color: #ef8157;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #eb6532 !important;
+    }
+  }
+  &.sm {
+    font-size: 0.8571em;
+    border-radius: 3px;
+    padding: 5px 15px;
+    &.ant-btn-round {
+      border-radius: 1em;
+    }
+    &.ant-btn-circle {
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+  &.lg {
+    font-size: 1rem;
+    border-radius: 6px;
+    padding: 15px 48px;
+    &.ant-btn-circle {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+    }
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: #403d39 !important;
+    color: #fff !important;
+  }
+  &[ant-click-animating-without-extra-node]:after {
+    border: 0 none;
+    opacity: 0;
+    animation: none 0 ease 0 1 normal;
+  }
+  &.ant-btn-round {
+    border-radius: 2em;
+  }
+  &.ant-btn-circle {
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+  }
+  // 避免被 ant button 颜色干扰
+  &.ant-btn:hover,
+  &.ant-btn:focus {
+    color: #fff !important;
+  }
+}

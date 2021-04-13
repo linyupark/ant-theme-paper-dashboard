@@ -1,9 +1,28 @@
+.ant-radio-wrapper {
+  &.ant-radio-wrapper-disabled {
+    .ant-radio {
+      border-color: #cdcdcd !important;
+      opacity: 0.5;
+      &:hover {
+        .ant-radio-inner {
+          border-color: #cdcdcd !important;
+          opacity: 0.5;
+        }
+      }
+    }
+    .ant-radio-inner {
+      background-color: #fff !important;
+      border-color: #cdcdcd !important;
+    }
+  }
+}
+
 .ant-radio-wrapper:hover {
   .ant-radio {
-    border-color: #9a9a9a !important;
+    border-color: #cdcdcd !important;
     &:hover {
       .ant-radio-inner {
-        border-color: #9a9a9a !important;
+        border-color: #cdcdcd !important;
       }
     }
   }
@@ -17,6 +36,15 @@
       }
     }
   }
+  &.ant-radio-wrapper-checked .ant-radio.ant-radio-checked {
+    border-color: #9a9a9a !important;
+    .ant-radio-inner {
+      border-color: #9a9a9a !important;
+      &::after {
+        background-color: #9a9a9a;
+      }
+    }
+  }
 }
 
 .ant-radio {
@@ -24,9 +52,9 @@
   border-radius: 50%;
 
   &.ant-radio-checked {
-    border-color: #9a9a9a;
+    border-color: #9a9a9a !important;
     .ant-radio-inner {
-      border-color: #9a9a9a;
+      border-color: #9a9a9a !important;
       &::after {
         background-color: #9a9a9a;
       }
@@ -64,6 +92,8 @@
 
     .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
       border-color: @link-color;
+      // 激活文案颜色
+      color: #fff;
     }
     .ant-radio-button-wrapper-checked:not([class*=' ant-radio-button-wrapper-disabled']).ant-radio-button-wrapper:first-child {
       border-right-color: @link-color;
@@ -78,6 +108,13 @@
       .ant-radio-button-checked {
         background: @link-color;
         border-color: @link-color;
+      }
+    }
+  }
+  .ant-radio-wrapper {
+    .ant-radio {
+      .ant-radio-inner {
+        border-color: #cdcdcd;
       }
     }
   }
