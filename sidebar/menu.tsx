@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useLocation, history, useModel } from "umi";
 import { DashboardOutlined } from "@ant-design/icons";
 import { Tooltip } from "antd";
@@ -41,7 +41,7 @@ const Menu = (props: MenuProps) => {
   }, [pathname]);
 
   // 标题
-  const title = (url) => tpl(url.replace("/", "mo."));
+  const title = useMemo(() => tpl(props.url.replace("/", "mo.")), []);
 
   useEffect(() => {
     // 默认当前是否需要展开
@@ -64,7 +64,7 @@ const Menu = (props: MenuProps) => {
           <>
             <i className={props.icon}>{iconMap[props.icon ?? -1]}</i>
             <p>
-              {title(props.url)}
+              {title}
               {/* 有子菜单展示箭头 */}
               {props.childList && (
                 <b className={`caret${expanded ? " expanded" : ""}`}></b>
@@ -75,10 +75,10 @@ const Menu = (props: MenuProps) => {
           <>
             <span className="mini-icon">{MkText(miniTitle)}</span>
             <Tooltip
-              title={title(props.url).split("").length > 17 ? title : ""}
+              title={title.split("").length > 17 ? title : ""}
               placement="right"
             >
-              <span className="sub-title">{title(props.url)}</span>
+              <span className="sub-title">{title}</span>
             </Tooltip>
           </>
         )}
