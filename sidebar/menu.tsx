@@ -41,7 +41,7 @@ const Menu = (props: MenuProps) => {
   }, [pathname]);
 
   // 标题
-  const title = useMemo(() => tpl(props.url.replace("/", "mo.")), []);
+  const title = tpl(props.url.replace("/", "mo."));
 
   useEffect(() => {
     // 默认当前是否需要展开

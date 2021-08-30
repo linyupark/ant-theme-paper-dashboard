@@ -1,6 +1,6 @@
 {
   "name": "@x011/theme-paper-dashboard",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Theme Paper Dashboard for Ant Design Web",
   "main": "./dist/theme.js",
   "source": "theme.js",

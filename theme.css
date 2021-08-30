@@ -752,13 +752,14 @@
 }
 .ant-switch {
   box-sizing: content-box;
-  height: 26px;
-  background-color: #fff;
-  border: 2px solid rgba(0, 0, 0, 0.4);
+  background-color: #fff !important;
+  border: 2px solid rgba(0, 0, 0, 0.4) !important;
+  line-height: 16px !important;
 }
 .ant-switch .ant-switch-handle {
-  height: 22px;
-  width: 22px;
+  height: 16px;
+  width: 16px;
+  top: 1px;
 }
 .ant-switch .ant-switch-handle::before {
   border-radius: 50%;
@@ -768,13 +769,13 @@
 .ant-switch .ant-switch-inner {
   color: rgba(0, 0, 0, 0.25);
   font-weight: 700;
-  padding: 0 6px;
+  padding: 0 4px;
 }
 .ant-switch.ant-switch-checked {
-  border-color: #ef8157;
+  border-color: #ef8157 !important;
 }
 .ant-switch.ant-switch-checked .ant-switch-handle {
-  left: calc(100% - 22px - 3px);
+  left: calc(100% - 18px);
 }
 .ant-switch.ant-switch-checked .ant-switch-handle::before {
   background-color: #ef8157;
